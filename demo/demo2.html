@@ -1,0 +1,26 @@
+<!-- 1. viết chương trình nhập vào 2 số bát kì ,sau đso tính tổng , hiệu , tích , thương -->
+ <!-- 2 in kết quả ra màn hình -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a,b,Tong,Hieu,Tich,Thuong;
+        a=prompt('nhập vào số thứ nhất: ');
+        b=prompt('nhập vào số thứ hai: ');
+        Tong=parseInt(a)+parseInt(b);
+        Hieu=parseInt(a)-parseInt(b);
+        Tich=parseInt(a)*parseInt(b);
+        Thuong=parseInt(a)/parseInt(b); 
+        document.writeln('Tổng của ' +a+ ' và ' +b+ ' là ' +Tong+ '<br>');
+        document.writeln('Hiệu của ' +a+ ' và ' +b+ ' là ' +Hieu+ '<br>' );
+        document.writeln('Tích của ' +a+ ' và ' +b+ ' là ' +Tich+ '<br>');
+        document.writeln('Thương của ' +a+ ' và ' +b+ ' là ' +Thuong+ '<br>');
+
+    </script>
+    
+</body>

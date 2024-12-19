@@ -1,0 +1,25 @@
+Viết chương trình nhập vào số nguyên bất kì, in ra màn hình bảng cửa chương của số nguyên vừa nhập. <br>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var _number;
+        _number = parseInt(prompt('bạn nhập vào số nguyên bất kì.'));
+        if (_number >= 2 && _number <= 10) {
+            for (var i = 1; i <= 10; i++) {
+                document.write(+_number + ' x ' + i + '=' + _number * i + '<br>');
+            }
+        }
+        else document.write("Bạn nhập sai mời nhập lại.");
+
+    </script>
+</body>
+
+</html>

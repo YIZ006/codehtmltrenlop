@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Name, Phone, Email, Birth_Day;
+        _Name = prompt('Mời nhập tên.');
+        _Phone = prompt('Mời bạn nhập SĐT');
+        _Email = prompt('Mời nhập Email');
+        _Birth_Day = prompt('Mời bạn nhập ngày sinh');
+        // in thông tin vừa nhập ra bảng
+        document.write('<table border="1px" align="center">');
+            
+        document.write('<tr>');
+        document.write('<td><b>'+'Họ tên'+'</b></td>');
+        document.write('<td>' +_Name+'</td>');
+        document.write('</tr>');
+
+        document.write('<tr>');
+        document.write('<td><b>'+'Email'+'</b></td>');
+        document.write('<td>' +_Email+'</td>');
+        document.write('</tr>');
+
+        document.write('<tr>');
+        document.write('<td><b>'+'Điện Thoại'+'</b></td>');
+        document.write('<td>' +_Phone+'</td>');
+        document.write('</tr>');
+
+        document.write('<tr>');
+        document.write('<td><b>'+'Ngày Sinh'+'</b></td>');
+        document.write('<td>' +_Birth_Day+'</td>');
+        document.write('</tr>');
+
+        document.write('</table>');
+
+    </script>
+
+    
+</body>
+
+</html>

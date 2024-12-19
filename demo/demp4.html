@@ -1,0 +1,26 @@
+<!-- 1 viết chương trình nhập vào điểm toán , lý , hóa . Sau đó tính điểm trung bình 
+2 dựa vào điểm trung bình in ra mnaf hình hạnh kiểm tương ứng 
+nếu đtb <5 thì học lực yểu -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        var Toan,Ly,Hoa,DTB;
+        Toan=prompt("Nhập điểm toán ");
+        Ly=prompt("Nhập điểm Lý");
+        Hoa=prompt("Nhập điểm Hóa");
+        DTB=(parseFloat(Toan)+parseFloat(Ly)+parseFloat(Hoa))/3;
+        document.write("Điểm trung bình của ba môn là: "+DTB+"<br>");
+        if(DTB<5.0) document.write("Hoc luc yeu");
+        else if(DTB<6.5) document.write("Hoc luc trung binh");
+        else if(DTB<8.0) document.write("Hoc luc kha");
+        else if(DTB>=8.0&&DTB<=10) document.write("Hoc luc gioi");
+        else document.write("Nhap sai");
+    </script>
+</body>
+</html>
