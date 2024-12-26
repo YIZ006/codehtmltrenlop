@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Thực hiện các bước với mảng</h1>
+    <div>
+        <p><strong>Giá trị đầu tiên đã tách: </strong><span id="first-fruit"></span></p>
+        <p><strong>Mảng sau khi thay đổi: </strong><span id="final-array"></span></p>
+        <p><strong>Mảng sau khi thêm 'Ổi': </strong><span id="added-banana"></span></p>
+        <p><strong>Mảng sau khi thay thế giá trị giữa bằng 'Chanh': </strong><span id="replaced-middle"></span></p>
+    </div>
+
+    <script>
+        // Khởi tạo mảng fruits
+        let fruits = ['Cam', 'Bưởi'];
+
+        // Bước 1: Thêm 'Ổi' vào cuối
+        fruits.push('Ổi');
+        document.getElementById('added-banana').textContent = JSON.stringify(fruits); // Hiển thị mảng sau khi thêm 'Ổi'
+
+        // Bước 2: Thay thế giá trị ở giữa bằng 'Chanh'
+        if (fruits.length % 2 !== 0) {
+            let middle = Math.floor(fruits.length / 2);
+            fruits[middle] = 'Chanh';
+        }
+        document.getElementById('replaced-middle').textContent = JSON.stringify(fruits); // Hiển thị mảng sau khi thay thế giá trị giữa bằng 'Chanh'
+
+        // Bước 3: Tách giá trị đầu tiên của mảng và hiển thị nó
+        let firstFruit = fruits.shift(); // Tách phần tử đầu tiên
+
+        // Bước 4: Thêm mảng fruits1
+        let fruits1 = ['Na', 'Chuối'];
+        fruits = fruits.concat(fruits1); // Nối mảng fruits1 vào mảng fruits
+
+        // Hiển thị kết quả trên trang
+        document.getElementById('first-fruit').textContent = firstFruit;  // Hiển thị giá trị đầu tiên đã tách
+        document.getElementById('final-array').textContent = JSON.stringify(fruits);  // Hiển thị mảng cuối cùng
+    </script>
+</body>
+</html>

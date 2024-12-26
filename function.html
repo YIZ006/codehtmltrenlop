@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var age;
+        // var name;
+        // name = prompt('Bạn nhập vào tên');
+        // age = parseInt(prompt('Bạn nhập vào tuổi'));
+        // alert('Xin Chào ' + name + ', Bạn có số tuổi là: ' + age);
+        // var result;
+        // result=confirm('Bạn có muốn tiếp tục');
+        // // no=confirm('Bạn không muốn tiếp tục');
+        // if(result){
+        //     alert('Bạn đã chọn OK');
+        //     document.write('Xin chào ' + name  );
+        // }
+        // else{
+        //     alert('Bạn đã chọn cancel');
+        // }
+        //Viết hàm kiểm tra 1 số có phải là số hoàn hảo  không
+        function kthh(number){
+            var sum=0;
+            for(let i=0;i<number;i++){
+                if(number%i == 0){
+                    sum+=i;
+
+                }
+                if(sum==number){
+                    document.write('Số ' + number + ' Là Số hoàn hảo ');
+                }else document.write('Số ' + number + ' Là Số không hoàn hảo ');
+            }
+        }
+        var x;
+        x=parseInt(prompt('Nhập Giá trị của x' ));
+        kthh(x);
+        kthh(10);
+        kthh(17);
+        
+
+
+    </script>
+</body>
+
+</html>

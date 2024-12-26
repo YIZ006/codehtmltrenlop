@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=-, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+        let a= [7,23,8,12,91,51];
+        for(let i=0;i<a.length;i++){
+            for (let j=i+1;j<a.length;j++){
+                if(a[i]>a[j]){
+                    if(a[i]>a[j]){
+                        var x;
+                        x= a[i];
+                        a[i]=a[j];
+                        a[j]=x;
+
+                    }
+                }
+            }
+        }
+        document.write('Mảng tăng dần: ');
+        for(let i=0;i<a.length;i++){
+        document.write(+a[i] + ' ');
+        }
+//Mảng cộng  5 với phần tử chẵn
+document.write('<br>');
+        let numbers = [15, 7, 6, 8, 9, 15, 23];
+      
+        for (let i = 0; i < numbers.length; i++) { 
+            if (numbers[i] % 2 === 0) {
+                numbers[i] += 5;
+            }
+        }
+        document.write('Mảng tăng 5 với phần tử chẵn: ');
+        for(let i=0;i<numbers.length;i++){
+        document.write(+numbers[i] + ' ');
+        } // [15, 7, 11, 13, 9, 15, 23]
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo mảng dùng toán tử new
+        var ar = new Array('Hoa', 'Hồng', 'Huệ', 'Đào', 5, 15, 25.5, 3);
+        //Khai báo mảng dùng cặp[].
+        var ar1 = ['Tùng', 'Cúc', 'Mai', 'Vân', 23, 7, 19, 5, 20.5];
+        // //khai báo mảng rỗng sau đso gán giá trị qua key
+        var ar2 = [];
+        ar2['name'] = 'Nguyễn Tuấn Anh';
+        ar2['add'] = 'Hà Nội';
+        ar2['phone'] = '0921312355';
+        ar2['class'] = 'DTLTS24';
+        //truy cập các phần tử của mảng :tên_mảng[key];
+        document.write(ar[0]);
+        document.write('<br>');
+        document.write(ar[1]);
+        document.write('<br>');
+        document.write(ar[6]);
+        document.write('<br>');
+        document.write(ar2['name']);
+        //sử dụng vòng lặp for
+        for (let i = 0; i < ar.length; i++) {
+            document.write(ar[i] + ' ');
+        }
+        
+        document.write('<br>');
+        //duyệt mảng bằng foreach
+        ar2.forEach(function (item, name) {
+            document.write(item + ' ');
+        });
+        document.write('<br>');
+        //duyệt mảng bằng vòng forof
+        for (var item of ar) {
+            document.write(' ' + item);
+        }
+        document.write('<br>');
+        //duyệt mảng với forin 
+        for (var key in ar){
+            document.write(' '+ar[key]);
+        }
+        document.write('<br>');
+    </script>
+</body>
+
+</html>
