@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write('Demo về object do người dùng tạo');
+        document.write('<br> Cách 4: sử dụng class khởi tạo đối tượng');
+        class Student{
+            constructor(_id, _name, _address, _class){
+                this.MaSV = _id;
+                this.TenSV = _name;
+                this.NoiSinh = _address;
+                this.Lop = _class;
+            }
+            //Phuonwg thức của đối tượng:
+            showInfor(){
+                return 'Mã sinh viên: ' +this.MaSV+ '<br>' + 'Tên sinh viên: ' +this.TenSV+'<br>'+ 'Nơi sinh: ' +this.NoiSinh+'<br>'+ 'Lớp: ' +this.Lop;
+            }
+        };
+        var sv1 = new Student('SV01', 'PM Chiến', 'Nam Định', 'TDH1');
+        var sv2 = new Student('SV02', 'Yiz PMeridiem', 'Nam Định', 'TDH1');
+        document.write('<br> Thông tin sinh viên :'+sv1.showInfor());
+        document.write('<br> Thông tin sinh viên :'+sv2.showInfor());
+    </script>
+</body>
+</html>

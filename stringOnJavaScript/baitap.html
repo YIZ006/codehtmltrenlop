@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function Sanpham(_name, _price, _image) {
+            this.name = name;
+            this.price = price;
+            this.image = _image;
+        }
+        //khởi tạo mảng
+        var Sanphams = [];
+        //nhập số phần tửu mảng
+        var n = prompt('Hãy nhập số lượng phần tử');
+        for (let i = 0; i < n; i++) {
+            var _name = prompt('mời nhập tên');
+            var _price = prompt('Mời nhập giá');
+            var _image = prompt('Mời nhập URL ảnh sản phẩm')
+
+
+            //khởi tạo đối tượng
+            var std = new Sanpham(_name, _price, _image);
+            //  gán mỗi phần tử vào mảng
+            Sanphams.push(std);
+        }
+        // thẻ mở table
+        document.write('<table>');
+        // In ra màn hình cấu trúc bảng phần tiêu đề
+        document.write('<tr>');
+        document.write('<th>STT</th>')
+        document.write('<th>Image</th>');
+        document.write('<th>Name</th>');
+        document.write('<th>Price</th>');
+        document.write('</tr>');
+        for (let i=0;i < Sanphams.length;i++) {
+            // In ra màn hình cấu trúc bảng phần nội dung
+            document.write('<tr>');
+            document.write('<td>' +(i + 1 )+ '</td>');
+            document.write('<td>' +Sanphams[i].image + '</td>');
+            document.write('<td>' +Sanphams[i].name + '</td>');
+            document.write('<td>' +Sanphams[i].price + '</td>');
+            document.write('</tr>');
+        }
+        document.write('</table>'); // thẻ đóng tabl
+    </script>
+</body>
+
+</html>

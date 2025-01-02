@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Constructor cho sản phẩm
+        function Sanpham(_name, _price, _image) {
+            this.name = _name;
+            this.price = _price;
+            this.image = _image;
+        }
+
+        // Mảng lưu trữ các sản phẩm
+        var Sanphams = [];
+        
+        // Nhập số lượng sản phẩm
+        var n = prompt('Hãy nhập số lượng sản phẩm:');
+        
+        // Lặp qua số sản phẩm và nhập thông tin
+        for (let i = 0; i < n; i++) {
+            var _name = prompt('Mời nhập tên sản phẩm');
+            var _price = prompt('Mời nhập giá sản phẩm');
+            var _image = prompt('Mời nhập URL hình ảnh sản phẩm');
+            
+            // Tạo đối tượng mới và đẩy vào mảng Sanphams
+            var product = new Sanpham(_name, _price, _image);
+            Sanphams.push(product);
+        }
+
+        // Tạo bảng để hiển thị dữ liệu
+        document.write('<table>');
+        
+        // Tiêu đề bảng
+        document.write('<tr>');
+        document.write('<th>STT</th>');
+        document.write('<th>Image</th>');
+        document.write('<th>Name</th>');
+        document.write('<th>Price</th>');
+        document.write('</tr>');
+
+        // Lặp qua mảng và hiển thị dữ liệu
+        for (let i = 0; i < Sanphams.length; i++) {
+            document.write('<tr>');
+            document.write('<td>' + (i + 1) + '</td>'); // STT
+            document.write('<td><img src="' + Sanphams[i].image + '" alt="Image" width="100"></td>'); // Hình ảnh
+            document.write('<td>' + Sanphams[i].name + '</td>'); // Tên sản phẩm
+            document.write('<td>' + Sanphams[i].price + '</td>'); // Giá sản phẩm
+            document.write('</tr>');
+        }
+        
+        document.write('</table>');
+    </script>
+</body>
+
+</html>
