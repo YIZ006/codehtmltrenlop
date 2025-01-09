@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Nhập nội dung</h2>
+    <input type="text" placeholder="Nhập tên sản phẩm" id="name">
+    <input type="button" id="button_id" onclick="add_pro()" value="Add product">
+    <table border="1" cellpadding="5" cellspacing="0" width="300px">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script>
+        // Hàm thêm sản phẩm vào bảng
+        function add_pro() {
+            let proname = document.getElementById("name").value;  // Lấy giá trị từ ô nhập liệu
+            if (proname == '') {
+                alert("Mày chưa nhập dữ liệu kìa sv");
+            } else {
+                // Tạo một dòng mới cho bảng với tên sản phẩm và nút xóa
+                let temp = '<tr><td>' + proname + '</td><td align="center"><button onclick="remove_element(this)">Remove</button></td></tr>';
+                // Thêm dòng mới vào cuối bảng
+                document.getElementById('tbody').insertAdjacentHTML('beforeend', temp);
+            }
+        }
+
+        // Hàm xóa dòng khi nhấn nút "Xóa"
+        function remove_element(button) {
+            // Tìm dòng cha chứa nút "Xóa"
+            let row = button.parentElement.parentElement;
+            // Xóa dòng khỏi bảng
+            row.remove();
+        }
+    </script>
+
+</body>
+
+</html>

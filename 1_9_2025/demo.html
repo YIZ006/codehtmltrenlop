@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Page 1</h2>
+    <a href="page2.html">Di den trang 2</a>
+    <button type="button" onclick="goto_page()"> Go to</button>
+</body>
+<script>
+    function goto_page(){
+        if(window.history.length<=1){
+            alert('Ban chua co lich su di toi, di lui cac trang wed');
+        }else{
+            window.history.go(1); // nhay toi trang dau tien
+        }
+        
+    }
+</script>
+</html>

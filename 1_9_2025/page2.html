@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Page 2</h2>
+    <button onclick="open_new()"> click open new</button>
+    <button onclick="close_new()">close windows</button>
+    <button onclick="open_new1()">click Open</button>
+    <button onclick="print_now()">printf</button>
+    <button type="button" onclick="go_back()">Go back</button>
+    <script>
+        function go_back(){
+            if(window.history.length<=1){
+                alert('Ban chua co lich su di toi lui cac trang');
+            }else{
+                window.history.back();//nhay toi trang dau tien
+            }
+        }
+    
+
+    </script>
+    <script>
+        function open_new() {
+            let link = "https://google.com";
+            window.open(link, "demo windows", "top = 50,left = 200 , width = 500 , height = 350");
+        }
+        function close_new(){
+            window.close();
+        }
+        function open_new1() {
+            let mywindow;
+            mywindow = window.open("", "my window", "top = 50,left = 200 , width = 500 , height = 350");
+            //hiển thị nội dung lên cửa sổ
+            mywindow.document.write('<h1>Hello my windows</h1>');
+            mywindow.alert('Hello my windows');
+            mywindow.document.write('<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus odit nulla ab, saepe laudantium necessitatibus velit. Omnis sequi quisquam, quasi incidunt, laboriosam, pariatur sapiente rerum quod repudiandae vero tempore?</h1>');
+        }
+        function print_now(){
+            window.print();
+        }
+        
+    </script>
+</body>
+
+</html>

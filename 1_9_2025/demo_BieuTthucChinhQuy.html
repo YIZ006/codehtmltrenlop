@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác thực SĐT phải có 10 chữ số</title>
+</head>
+<body>
+    <h2>Xác thực số điện thoại</h2>
+    <h3 id="kq"></h3>
+    <script>
+        let regx_number=/^[0-9]{9,10}$/; //Mẫu biểu thức chính quy
+        let phone = prompt("Nhập vào số điện thoại");
+        if(regx_number.test(phone)){
+            document.getElementById("kq").innerHTML="Định dạng số " + phone + ' Đã đúng';
+        }else{
+            document.getElementById("kq").innerHTML="Định dạng số " + phone + " Không đúng"
+        }
+    </script>
+</body>
+</html>

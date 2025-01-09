@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>truy cập thuộc tính của phần tử thông qua id</title>
+</head>
+<body>
+    <h2 id="my_id">Nội dung h1</h2>
+    <button onclick="change_content()">Change Content</button>
+    <script>
+        function change_content(){
+            my_id.innerHTML= "Nội dung của thẻ h1";
+            my_id.style.color = 'blue';
+            my_id.style.border= '1px solid green';
+        }
+    </script>
+</body>
+</html>
