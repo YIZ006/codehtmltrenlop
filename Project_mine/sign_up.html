@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Sinh Viên</title>
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Đăng Ký Sinh Viên</h2>
+        <form id="registration-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email should contain @" required>
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Only 10 digits are allowed" pattern="\d{10}" required>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <label>Gender:</label>
+            <div class="gender">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+            <label for="area">Area:</label>
+            <input type="text" id="area" name="area" placeholder="Enter your area" required>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+            <label for="pin"> PIN:</label>
+            <input type="text" id="pin" name="pin" required>
+            <label for="qualification">Qualification:</label>
+            <select id="qualification" name="qualification" required>
+                <option value="">Select Qualification</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="information-technology">Information Technology</option>
+                <option value="computer-applied">Computer Application</option>
+                <option value="telecommunication">Telecommunication</option>
+            </select>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div class="button">
+                <button type="submit">Registered</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Chuyển hướng tới trang thành công
+            window.location.href = 'ressourcebai2.html';
+        });
+    </script>
+</body>
+</html>
