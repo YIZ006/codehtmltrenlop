@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif; /* Đặt font chữ cho toàn bộ trang là Arial, nếu không có thì dùng sans-serif */
+    margin: 0; /* Xóa bỏ khoảng cách bên ngoài của body */
+    padding: 0; /* Xóa bỏ khoảng cách bên trong của body */
+    background-color: #f8f8f8; /* Đặt màu nền cho body */
+    color: #333; /* Đặt màu chữ mặc định cho body */
+}
+
+a {
+    text-decoration: none; /* Xóa bỏ gạch chân của các liên kết */
+    color: inherit; /* Đặt màu của liên kết giống với màu chữ của phần tử cha */
+}
+
+.navbar {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử trong navbar */
+    justify-content: space-between; /* Căn giữa các phần tử với khoảng cách đều */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    background-color: #6b0aff; /* Đặt màu nền cho navbar */
+    color: white; /* Đặt màu chữ cho navbar */
+    padding: 10px 20px; /* Đặt khoảng cách bên trong cho navbar */
+}
+
+.navbar .logo img {
+    height: 50px; /* Đặt chiều cao cho logo trong navbar */
+}
+
+.navbar nav a {
+    margin-left: 20px; /* Đặt khoảng cách bên trái cho các liên kết trong navbar */
+    color: white; /* Đặt màu chữ cho các liên kết trong navbar */
+    font-weight: bold; /* Đặt chữ đậm cho các liên kết trong navbar */
+}
+
+.main-content {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử trong main-content */
+    margin: 20px; /* Đặt khoảng cách bên ngoài cho main-content */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px; /* Đặt chiều rộng cố định cho sidebar */
+    background-color: #fff; /* Đặt màu nền cho sidebar */
+    border: 1px solid #ddd; /* Đặt viền cho sidebar */
+    border-radius: 5px; /* Bo tròn các góc của sidebar */
+    margin-right: 20px; /* Đặt khoảng cách bên phải cho sidebar */
+    overflow: hidden; /* Ẩn các phần tử tràn ra ngoài sidebar */
+}
+
+.sidebar-header {
+    background-color: #ff6f00; /* Đặt màu nền cho tiêu đề sidebar */
+    color: white; /* Đặt màu chữ cho tiêu đề sidebar */
+    text-align: center; /* Căn giữa chữ trong tiêu đề sidebar */
+    padding: 10px 0; /* Đặt khoảng cách bên trong cho tiêu đề sidebar */
+}
+
+.sidebar ul {
+    list-style: none; /* Xóa bỏ kiểu danh sách cho ul */
+    padding: 0; /* Xóa bỏ khoảng cách bên trong cho ul */
+    margin: 0; /* Xóa bỏ khoảng cách bên ngoài cho ul */
+}
+
+.sidebar ul li {
+    border-bottom: 1px solid #ddd; /* Đặt viền dưới cho mỗi mục trong danh sách */
+}
+
+.sidebar ul li a {
+    display: block; /* Đặt các liên kết thành khối để dễ dàng click */
+    padding: 10px; /* Đặt khoảng cách bên trong cho các liên kết */
+    color: #333; /* Đặt màu chữ cho các liên kết trong sidebar */
+    font-weight: bold; /* Đặt chữ đậm cho các liên kết trong sidebar */
+}
+
+/* Container cho sản phẩm */
+.container {
+    display: flex; /* Sử dụng flexbox để sắp xếp các sản phẩm */
+    flex-wrap: wrap; /* Cho phép các sản phẩm xuống dòng khi không đủ chỗ */
+    gap: 20px; /* Đặt khoảng cách giữa các sản phẩm */
+    justify-content: flex-start ; /* Căn trái các sản phẩm */
+}
+
+.product-card {
+    background-color: white; /* Đặt màu nền cho thẻ sản phẩm */
+    border-radius: 8px; /* Bo tròn các góc của thẻ sản phẩm */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đặt bóng cho thẻ sản phẩm */
+    text-align: center; /* Căn giữa chữ trong thẻ sản phẩm */
+    width: 200px; /* Đặt chiều rộng cố định cho thẻ sản phẩm */
+    padding: 15px; /* Đặt khoảng cách bên trong cho thẻ sản phẩm */
+    flex-shrink: 0; /* Đảm bảo thẻ sản phẩm không bị co lại */
+}
+
+.product-card img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của thẻ sản phẩm */
+    height: 200px; /* Đặt chiều cao cố định cho ảnh sản phẩm */
+    object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
+    border-radius: 5px; /* Bo tròn các góc của ảnh sản phẩm */
+    margin-bottom: 10px; /* Đặt khoảng cách bên dưới cho ảnh sản phẩm */
+}
+
+.product-card h3 {
+    font-size: 16px; /* Đặt kích thước chữ cho tiêu đề sản phẩm */
+    font-weight: bold; /* Đặt chữ đậm cho tiêu đề sản phẩm */
+    margin: 10px 0; /* Đặt khoảng cách bên trên và dưới cho tiêu đề sản phẩm */
+}
+
+.product-card .category {
+    font-size: 14px; /* Đặt kích thước chữ cho danh mục sản phẩm */
+    color: #777; /* Đặt màu chữ cho danh mục sản phẩm */
+    margin-bottom: 5px; /* Đặt khoảng cách bên dưới cho danh mục sản phẩm */
+}
+
+.product-card .price {
+    font-size: 16px; /* Đặt kích thước chữ cho giá sản phẩm */
+    color: #333; /* Đặt màu chữ cho giá sản phẩm */
+    font-weight: bold; /* Đặt chữ đậm cho giá sản phẩm */
+    margin-top: 10px; /* Đặt khoảng cách bên trên cho giá sản phẩm */
+}

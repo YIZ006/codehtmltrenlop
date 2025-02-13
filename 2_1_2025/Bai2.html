@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+        }
+        table tr td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        img{
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var Product = [
+            {
+                ID: '01',
+                Image: 'image/anh.jpg',
+                Name: 'Túi xách thời trang',
+                Price: '250.000 đ'
+            },
+            {
+                ID: '02',
+                Image: 'image/anh.jpg',
+                Name: 'Túi xách thời trang',
+                Price: '250.000 đ'
+            },
+            {
+                ID: '03',
+                Image: 'image/anh.jpg',
+                Name: 'Túi xách thời trang',
+                Price: '250.000 đ'
+            }  
+        ];
+        document.write('<table>');
+        document.write('<tr>');
+        document.write('<td> STT </td>');
+        document.write('<td> Image </td>');
+        document.write('<td> Name </td>');
+        document.write('<td> Price </td>');
+        document.write('</tr>');
+
+        for(let infor of Product){
+            document.write('<tr>');
+            document.write('<td>' + infor.ID + '</td>');
+            document.write('<td><img src="' + infor.Image + '" /></td>');
+            document.write('<td>' + infor.Name + '</td>');
+            document.write('<td>' + infor.Price + '</td>');
+            document.write('<tr>');
+        }
+    </script>
+</body>
+</html>

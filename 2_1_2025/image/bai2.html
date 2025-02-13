@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 1px solid black;
+      }
+
+      table tr td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+
+      img {
+        width: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      function Product(_name, _price, _image) {
+        this.name = _name;
+        this.price = _price;
+        this.image = _image;
+      }
+      var Products = [];
+
+      var n = parseInt(prompt("Mời nhập số phần tử của bảng "));
+      for (let i = 0; i < n; i++) {
+        var name = prompt("hãy nhập tên sản phẩm");
+        var price = parseFloat(prompt("Nhập giá của sản phẩm"));
+        var image = prompt("Nhập URL hình ảnh của sản phẩm");
+
+        var prd = new Product(name, price, image);
+        Products.push(prd);
+      }
+
+      //tạo đối tượng
+
+      document.write("<table>");
+      document.write("<tr>");
+      document.write("<td> STT </td>");
+      document.write("<td> Image </td>");
+      document.write("<td> Name </td>");
+      document.write("<td> Price </td>");
+      document.write("</tr>");
+
+      for (let i = 0; i < n; i++) {
+        document.write("<tr>");
+
+        document.write("<td>" + (i + 1) + "</td>");
+        document.write('<td><img src="' + Products[i].image + '" /></td>');
+        document.write("<td>" + Products[i].name + "</td>");
+        document.write("<td>" + Products[i].price + "</td>");
+        document.write("<tr>");
+      }
+
+      document.write("</table>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo object</title>
+</head>
+
+<body>
+    <script>
+        // C1: Sử dụng OBJECT LITERALS
+        var student = {
+            Masv: 'SV01',
+            TenSV: 'Tuấn Anh',
+            Noisinh: 'Hà Nội',
+            Lop: 'K69TDH',
+            showinfor: function () {
+                return '<br>Mã sinh viên:' + this.Masv + 
+                    '<br>Tên sinh viên:' + this.TenSV + 
+                    '<br>Nơi sinh:' + this.Noisinh + 
+                    '<br>Lớp:' + this.Lop;
+            }
+        };
+        document.write('<br> Thông tin của sinh viên là:' + student.showinfor());
+
+        // C2: Sử dụng toán tử new Object
+        var student1 = new Object();
+        student1.Masv = 'SV02';
+        student1.TenSV = 'Lan Anh';
+        student1.Noisinh = 'Hà Nam';
+        student1.Lop = 'K69TDH';
+        student1.showinfor1 = function () {
+            return '<br>Mã sinh viên:' + this.Masv + 
+                '<br>Tên sinh viên:' + this.TenSV + 
+                '<br>Nơi sinh:' + this.Noisinh + 
+                '<br>Lớp:' + this.Lop;
+        };
+        document.write('<br> Thông tin của sinh viên 1 là:' + student1.showinfor1());
+
+        // C3: Dùng constructor (hàm tạo)
+        function StudentConstructor(_id, _name, _address, _class) {
+            this.Masv = _id;
+            this.TenSV = _name;
+            this.Noisinh = _address;
+            this.Lop = _class;
+            this.showinfor2 = function () {
+                return '<br>Mã sinh viên:' + this.Masv + 
+                    '<br>Tên sinh viên:' + this.TenSV + 
+                    '<br>Nơi sinh:' + this.Noisinh + 
+                    '<br>Lớp:' + this.Lop;
+            };
+        }
+        var sv1 = new StudentConstructor('SV03', 'Vân Anh', 'Nam Định', 'TDH1');
+        var sv2 = new StudentConstructor('SV04', 'Hà Anh', 'Hải Phòng', 'TDH2');
+        document.write('<br> Thông tin của sinh viên:' + sv1.showinfor2());
+        document.write('<br> Thông tin của sinh viên:' + sv2.showinfor2());
+
+        // C4: Dùng class để khởi tạo đối tượng
+        class StudentClass {
+            constructor(_id, _name, _address, _class) {
+                this.Masv = _id;
+                this.TenSV = _name;
+                this.Noisinh = _address;
+                this.Lop = _class;
+            }
+
+            showinfor3() {
+                return '<br>Mã sinh viên:' + this.Masv + 
+                    '<br>Tên sinh viên:' + this.TenSV + 
+                    '<br>Nơi sinh:' + this.Noisinh + 
+                    '<br>Lớp:' + this.Lop;
+            }
+        }
+        var sv3 = new StudentClass('SV05', 'Ngọc Anh', 'Thái Bình', 'TDH3');
+        var sv4 = new StudentClass('SV06', 'Bảo Anh', 'Hà Nội', 'TDH4');
+        document.write('<br> Thông tin của sinh viên:' + sv3.showinfor3());
+        document.write('<br> Thông tin của sinh viên:' + sv4.showinfor3());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        /* align-items: center; Căn giữa theo chiều dọc */
+        /* min-height: 100vh; Chiều cao tối thiểu = chiều cao của toàn bộ cửa sổ trình duyệt */
+        margin: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin: 0 auto; /* Căn giữa theo chiều ngang */
+        border: 1px solid rgb(0, 0, 0);
+      }
+
+      table  td {
+        border: 1px rgb(0, 0, 0) black;
+        padding: 10px;
+        text-align: center;
+      }
+      img {
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function sinhvien(_Hoten, _age, _email, _image) {
+        this.Hoten = _Hoten;
+        this.age = _age;
+        this.email = _email;
+        this.image = _image;
+      }
+      var sinhviens = [];
+
+      var n =parseInt(prompt("Mời nhập số phần tử bảng"));
+      for (let i = 0; i < n; i++) {
+        var Hoten = prompt("Mời nhập họ tên sinh viên");
+        var age = prompt("Mời nhập tuổi");
+        var email = prompt("Mời nhập địa chỉ email");
+        var image = prompt("Mời nhập URL Ảnh đại diện của bạn");
+
+        var Std = new sinhvien(Hoten, age, email, image);
+        sinhviens.push(Std);
+      }
+      document.write("<table>");
+      document.write("<tr>");
+      document.write("<td> STT </td> ");
+      document.write("<td> Ảnh đại diện </td>");
+      document.write("<td> Họ tên sinh viên </td>");
+      document.write("<td> Tuổi</td>");
+      document.write("<td> Địa chỉ email </td>");
+      document.write("</tr>");
+
+      for (let i = 0; i < n; i++) {
+        document.write("<tr>");
+        document.write("<td>" + (i + 1) + "</td>");
+        document.write('<td><img src="' + sinhviens[i].image + '"/></td>');
+        document.write("<td>" + sinhviens[i].Hoten + "</td>");
+        document.write("<td>" + sinhviens[i].age + "</td>");
+        document.write("<td>" + sinhviens[i].email + "</td>");
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!-- Phạm Minh Chiến 20240116P -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Đăng Ký Khóa Học</title>
+  <link rel="stylesheet" href="bai3.css">
+  
+</head>
+<body>
+  <div class="form-container">
+    <h2>Form đăng ký khóa học</h2>
+    <form id="registration-form">
+      <label for="name">Họ và tên:</label>
+      <input type="text" id="name" placeholder="Nguyễn Văn A" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Email" required>
+
+      <label for="phone">Điện thoại:</label>
+      <input type="text" id="phone" placeholder="Điện thoại" required>
+
+      <label for="address">Địa chỉ:</label>
+      <input type="text" id="address" placeholder="Địa chỉ" required>
+
+      <label>Giới tính:</label>
+      <div class="gender">
+        <input type="radio" id="male" name="gender" value="Nam" required>
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="Nữ" required>
+        <label for="female">Nữ</label>
+      </div>
+
+      <label>Sở thích:</label>
+      <div class="hobbies">
+        <input type="checkbox" id="sports" name="hobbies" value="Thể thao">
+        <label for="sports">Thể thao</label>
+        <input type="checkbox" id="travel" name="hobbies" value="Du lịch">
+        <label for="travel">Du lịch</label>
+        <input type="checkbox" id="reading" name="hobbies" value="Đọc sách">
+        <label for="reading">Đọc sách</label>
+      </div>
+
+      <label for="course">Khóa học:</label>
+      <select id="course" required>
+        <option value="">Chọn khóa học</option>
+        <option value="php-mysql">Khóa học Lập trình web PHP & MySQL</option>
+        <option value="frontend">Khóa học Frontend</option>
+        <option value="backend">Khóa học Backend</option>
+      </select>
+
+      <label for="bio">Giới thiệu bản thân:</label>
+      <textarea id="bio" rows="4" placeholder="Giới thiệu bản thân"></textarea>
+
+      <div class="button-group">
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+      </div>
+    </form>
+  </div>
+  <script src="bai3.js"></script>
+</body>
+</html>
