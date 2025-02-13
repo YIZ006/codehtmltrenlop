@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title {
+    padding: 10px 0;
+    display: inline-block;
+    margin-top: 15px;
+
+}
+.blog .blog-item{
+    width: 25%;
+    position: relative; /*item đưuọc định dạng tương đối với chiều rộng của container*/
+}
+/* css để hiển thị chữ trên ảnh */
+.blog .blog-item .blog-content{
+position: absolute;/*định dạng vị trí tuyệt đối so với ảnh*/
+top: 0;
+left: 0;
+padding: 20px;
+height: 100%;
+color: rgb(0, 0, 0);
+font-size: auto;
+opacity: 0; /*ẩn chữ trên ảnh*/
+}
+.blog-item img{
+    width: 100%;
+}
+.blog .blog-item:hover .blog-content{
+    opacity: 1;
+}

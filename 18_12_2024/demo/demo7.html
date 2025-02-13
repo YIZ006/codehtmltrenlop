@@ -1,0 +1,56 @@
+tạo bảng cửu chương 1=>9 với tr=8 td=8
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Cửu Chương 8x8</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Bảng Cửu Chương 8x8</h1>
+    <table id="multiplicationTable"></table>
+
+    <script>
+        // Hàm tạo bảng cửu chương
+        function createMultiplicationTable() {
+            const table = document.getElementById('multiplicationTable');
+
+            // Tạo hàng đầu (1 đến 8)
+            let headerRow = '<tr><th></th>';
+            for (let i = 1; i <= 8 ; i++) {
+                headerRow += `<th>${i}</th>`;
+            }
+            headerRow += '</tr>';
+            table.innerHTML += headerRow;
+
+            // Tạo các hàng bên dưới
+            for (let i = 1; i <= 10; i++) {
+                let row = `<tr><th>${i}</th>`;
+                for (let j = 1; j <= 8; j++) {
+                    row += `<td>${i} x ${j} = ${i*j}</td>`;
+                }
+                row += '</tr>';
+                table.innerHTML += row;
+            }
+        }
+
+        // Gọi hàm để tạo bảng
+        createMultiplicationTable();
+    </script>
+</body>
+</html>

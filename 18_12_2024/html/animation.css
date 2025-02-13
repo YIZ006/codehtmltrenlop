@@ -1,0 +1,81 @@
+.box{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(173, 9, 9);
+    animation-name: demo;
+    animation-duration:  3s; 
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+@keyframes demo{
+    0%{
+        color:   red;
+        transform: translateX(0);
+        transform: translateY(300px);
+    }
+    50%{
+        color:aqua;
+        transform: translateX(700px);
+    }
+    70%{
+        color: blueviolet;
+        transform: translateY(0);
+    }
+    100%{
+        color: violet;
+        background-color: chartreuse;
+        transform: rotate(180deg);
+        transform: scale(100);
+    } */
+}
+.image{
+    width: 200%;
+    height: 200%;
+    object-fit: cover;
+    transform: 1s ease;
+}
+.box:hover .image {
+    transform: scale(3s); Phóng to hình ảnh khi hover
+}
+.box{
+    text-align: right;
+}
+@keyframes moveLogo {
+    0% {
+        transform: translate(0, 0); 
+    }
+    25% {
+        transform: translate(calc(100vw - 100px), 0); /* Di chuyển sang bên phải */
+    }
+    50% {
+        transform: translate(calc(100vw - 100px), calc(100vh - 100px)); /* Di chuyển xuống dưới góc phải */
+    }
+    75% {
+        transform: translate(0, calc(100vh - 100px)); /* Di chuyển sang bên trái góc dưới */
+    }
+    100% {
+        transform: translate(0, 0); /* Quay lại vị trí ban đầu */
+    }
+}
+/* Định nghĩa kích thước và kiểu màn hình */
+.screen {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    overflow: hidden; /* Giúp phần tử không bị tràn ra ngoài */
+}
+
+/* Định nghĩa logo (hoặc phần tử di chuyển) */
+.logo {
+    width: 100px;
+    height: 100px;
+    background-color: red; /* Màu sắc của logo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    animation: moveLogo 5s linear infinite;
+}
+

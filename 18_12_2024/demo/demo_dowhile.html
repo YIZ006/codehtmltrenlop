@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách món ăn</title>
+</head>
+
+<body>
+    <script>
+        var choose;
+
+        do {
+            // Hiển thị menu món ăn
+            var menu = `
+                ========================================
+                1. Ăn Cut
+                2. Ăn Cuop
+                3. Ăn Dap
+                4. Ăn Dau
+                5. Ăn Dam
+                6. Kết thúc
+                ========================================
+            `;
+            document.body.innerHTML = menu; // Hiển thị lại menu mỗi lần
+            choose = parseInt(prompt('Mời bạn chọn 1->6'));
+
+            // Kiểm tra giá trị người dùng chọn
+            switch (choose) {
+                case 1:
+                    alert('Bạn đã chọn món: Ăn Cut');
+                    break;
+                case 2:
+                    alert('Bạn đã chọn món: Ăn Cuop');
+                    break;
+                case 3:
+                    alert('Bạn đã chọn món: Ăn Dap');
+                    break;
+                case 4:
+                    alert('Bạn đã chọn món: Ăn Dau');
+                    break;
+                case 5:
+                    alert('Bạn đã chọn món: Ăn Dam');
+                    break;
+                case 6:
+                    alert('Đang thoát chương trình');
+                    break;
+                default:
+                    alert('Bạn đã nhập sai, vui lòng chọn từ 1 đến 6!');
+                    break;
+            }
+        } while (choose != 6);
+
+    </script>
+</body>
+
+</html>
