@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form đăng ký thành viên</title>
+  <link rel="stylesheet" href="/css/dangki.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Form đăng ký</h2>
+    <form id="registration-form">
+      <!-- Họ và tên -->
+      <label for="name">Họ và tên:</label>
+      <input type="text" id="name" placeholder="Nhập họ và tên" required>
+
+      <!-- Giới tính -->
+      <label>Giới tính:</label>
+      <div class="gender">
+        <input type="radio" id="male" name="gender" value="Nam" required>
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="Nữ" required>
+        <label for="female">Nữ</label>
+      </div>
+
+      <!-- Hình ảnh -->
+      <label for="image">Hình ảnh:</label>
+      <input type="file" id="image" accept="image/*" required>
+
+      <!-- Quốc tịch -->
+      <label for="nationality">Quốc tịch:</label>
+      <select id="nationality" required>
+        <option value="">Chọn quốc tịch</option>
+        <option value="vietnam">Việt Nam</option>
+        <option value="usa">United States</option>
+        <option value="japan">Japan</option>
+      </select>
+
+      <!-- Sở thích -->
+      <label>Sở thích:</label>
+      <div class="hobbies">
+        <input type="checkbox" id="sports" name="hobbies" value="Thể thao">
+        <label for="sports">Thể thao</label>
+        <input type="checkbox" id="travel" name="hobbies" value="Du lịch">
+        <label for="travel">Du lịch</label>
+        <input type="checkbox" id="music" name="hobbies" value="Âm nhạc">
+        <label for="music">Âm nhạc</label>
+        <input type="checkbox" id="food" name="hobbies" value="Ẩm thực">
+        <label for="food">Ẩm thực</label>
+      </div>
+
+      <!-- Ghi chú -->
+      <label for="note">Ghi chú:</label>
+      <textarea id="note" rows="4" placeholder="Nhập ghi chú"></textarea>
+
+      <!-- Nút hành động -->
+      <div class="button-group">
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="/js/dangki.js"></script>
+</body>
+</html>

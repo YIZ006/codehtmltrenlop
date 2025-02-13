@@ -1,0 +1,78 @@
+/* Tổng quát */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  /* Phần logo */
+  .logo-container {
+    text-align: center;
+    background-color: #ff5900;
+    padding: 20px 0;
+  }
+  
+  .logo-container img {
+    height: 80px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #ff9544;
+    padding: 10px 0;
+  }
+  
+  .navbar nav a {
+    margin: 0 15px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar nav a:hover {
+    text-decoration: underline;
+  }
+  .content h1{
+    color: #ff0000;
+  }
+  /* Tiêu đề và bảng */
+  h1 {
+    text-align: center;
+    color: #ff6f00;
+    margin-top: 20px;
+  }
+  
+  .chuongtrinhhoc {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .chuongtrinhhoc th, .chuongtrinhhoc td {
+    border: 1px solid #ff6f00;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .chuongtrinhhoc thead th {
+    background-color: #ff0000;
+    color: white;
+  }
+  
+  .hightlight {
+    font-weight: bold;
+    color: #ff6f00;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ff8324;
+    color: white;
+  }
+  

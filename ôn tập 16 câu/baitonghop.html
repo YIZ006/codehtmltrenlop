@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề cương ôn tập HTML-CSS</title>
+    <style>
+        /* CSS chung */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea, select, button {
+            margin-top: 5px;
+        }
+
+        .error-message {
+            color: red;
+            display: none;
+        }
+
+        input:invalid + .error-message {
+            display: inline;
+        }
+
+        .success-message {
+            color: green;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .menu li:hover ul {
+            display: block;
+        }
+
+        .menu li ul li {
+            padding: 10px;
+            white-space: nowrap;
+        }
+
+        .vertical-menu li:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .horizontal-menu li:hover {
+            border: 2px solid red;
+            color: red;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Câu 1 -->
+    <h1>Câu 1</h1>
+    <h2>a. Danh sách HTML</h2>
+    <ul class="menu">
+        <li>Electronics</li>
+        <li>Fashion
+            <ul>
+                <li>Men's</li>
+                <li>Women's</li>
+                <li>Kids & Baby</li>
+            </ul>
+        </li>
+        <li>Home & Garden</li>
+        <li>Deals & Gifts</li>
+        <li>Collectibles & Art</li>
+    </ul>
+
+    <h2>b. CSS để biên tập nội dung</h2>
+    <p>CSS đã được áp dụng trong phần style ở trên.</p>
+
+    <!-- Câu 2 -->
+    <h1>Câu 2</h1>
+    <div>
+        <h2>HỌ TÊN: TRẦN VĂN THI</h2>
+        <h3>GIỚI THIỆU:</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem maiores saepe maxime excepturi totam ut deleniti hic. Laborum animi, possimus delectus culpa eos debitis sequi eum at tenetur, fugiat tempora.</p>
+        <h3>KỸ NĂNG:</h3>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JAVASCRIPT</li>
+            <li>ANGULAR</li>
+            <li>NODEJS</li>
+            <li>PHP</li>
+            <li>MYSQL</li>
+            <li>C#</li>
+        </ul>
+    </div>
+
+    <!-- Câu 3 -->
+    <h1>Câu 3</h1>
+    <form>
+        <h2>ĐĂNG KÝ</h2>
+        <label for="fullname">Full name:</label>
+        <input type="text" id="fullname" placeholder="Nhập fullname"><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Nhập tên"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Nhập mật khẩu"><br>
+        <label for="repassword">Nhập lại Password:</label>
+        <input type="password" id="repassword" placeholder="Nhập lại mật khẩu"><br>
+        <label>Giới tính:</label>
+        <input type="radio" name="gender" value="male"> Nam
+        <input type="radio" name="gender" value="female"> Nữ<br>
+        <label for="birthdate">Ngày sinh:</label>
+        <input type="date" id="birthdate"><br>
+        <label for="address">Địa chỉ:</label>
+        <textarea id="address"></textarea><br>
+        <label for="avatar">Avatar:</label>
+        <input type="file" id="avatar"><br>
+        <label>Sở thích:</label>
+        <input type="checkbox" name="hobby" value="movie"> Xem Phim
+        <input type="checkbox" name="hobby" value="sport"> Thể Thao
+        <input type="checkbox" name="hobby" value="web"> Web<br>
+        <button type="reset">Reset</button>
+        <button type="submit">OK</button>
+    </form>
+
+    <!-- Câu 4 -->
+    <h1>Câu 4</h1>
+    <form id="registrationForm">
+        <h2>FORM ĐĂNG KÝ TÀI KHOẢN</h2>
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" id="fullname" required>
+        <span class="error-message">Vui lòng điền vào trường này.</span><br>
+        <label for="email">Địa chỉ Email:</label>
+        <input type="email" id="email" required><br>
+        <label for="phone">Điện thoại:</label>
+        <input type="tel" id="phone" required><br>
+        <label for="birthdate">Ngày sinh:</label>
+        <input type="date" id="birthdate" required><br>
+        <button type="submit">ĐĂNG KÝ</button>
+        <p>* Tất cả thông tin bạn cung cấp được bảo mật.</p>
+    </form>
+
+    <!-- Câu 5 -->
+    <h1>Câu 5</h1>
+    <form id="courseForm">
+        <h2>Form đăng ký khóa học</h2>
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" id="fullname" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+        <label for="phone">Điện thoại:</label>
+        <input type="tel" id="phone" required><br>
+        <label for="address">Địa chỉ:</label>
+        <textarea id="address" required></textarea><br>
+        <label>Giới tính:</label>
+        <input type="radio" name="gender" value="male" required> Nam
+        <input type="radio" name="gender" value="female" required> Nữ<br>
+        <label>Sở thích:</label>
+        <input type="checkbox" name="hobby" value="sport"> Thể thao
+        <input type="checkbox" name="hobby" value="travel"> Du lịch
+        <input type="checkbox" name="hobby" value="reading"> Đọc sách<br>
+        <label for="course">Khóa học:</label>
+        <select id="course" required>
+            <option value="php">Lập trình web PHP & MySQL</option>
+        </select><br>
+        <label for="intro">Giới thiệu bản thân:</label>
+        <textarea id="intro" required></textarea><br>
+        <button type="submit">Đăng ký</button>
+    </form>
+    <p id="successMessage" style="display:none;">Bạn đã đăng ký thông tin thành công!</p>
+
+    <!-- Câu 6 -->
+    <h1>Câu 6</h1>
+    <nav>
+        <ul class="vertical-menu">
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+        </ul>
+        <ul class="horizontal-menu">
+            <li>Menu A</li>
+            <li>Menu B</li>
+            <li>Menu C</li>
+        </ul>
+    </nav>
+
+    <!-- Câu 7 -->
+    <h1>Câu 7</h1>
+    <div>
+        <h2>DANH MỤC SẢN PHẨM</h2>
+        <ul>
+            <li>Điện thoại</li>
+            <li>Laptop</li>
+            <li>Âm thanh</li>
+            <li>Đồng hồ</li>
+        </ul>
+    </div>
+
+    <!-- Câu 8 -->
+    <h1>Câu 8</h1>
+    <form>
+        <h2>Form đăng ký khóa học</h2>
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" id="fullname" value="Nguyễn Văn A"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" value="Email"><br>
+        <label for="phone">Điện thoại:</label>
+        <input type="tel" id="phone" value="Điện thoại"><br>
+        <label for="address">Địa chỉ:</label>
+        <textarea id="address">Địa chỉ</textarea><br>
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+    </form>
+
+    <!-- Câu 9 -->
+    <h1>Câu 9</h1>
+    <div>
+        <h2>TIN TỨC</h2>
+        <p>Kinh tế Chính trị</p>
+        <p>Cầm cổ chứng khoán: Kênh tạo vốn cho nhà đầu tư? Mời đây UBCKNN đã gửi công văn đề nghị các công ty chứng khoán, ngân hàng kiểm soát chặt giao dịch và cho vay cầm cổ mua cổ phiếu, nhằm hạn chế rủi ro. Giới chuyển môn cho rằng, chưa cần thiết phải lo lắng, bởi chứng khoán tăng là dấu hiệu tốt và vẫn trong tâm kiểm soát. Theo UBCKNN, đến ngày 20-3 có khoảng 13 triệu cổ phiếu các loại được cầm cổ với tổng giá trị khoảng 751 tỷ đồng. Ủy ban đã có yêu cầu phối hợp với Ngân hàng Nhà nước để liên kết quản lý việc cho vay và cầm cổ chứng khoán ở các ngân hàng thương mại.</p>
+    </div>
+
+    <!-- Câu 10 -->
+    <h1>Câu 10</h1>
+    <footer>
+        <p>FPT POLYTECHNIC © 2017, ALL NIGHTS RESERVED.</p>
+    </footer>
+
+    <!-- Câu 11 -->
+    <h1>Câu 11</h1>
+    <div>
+        <h2>Tình yêu và gia đình</h2>
+        <p>Trần cau</p>
+        <p>Xây dựng hạnh phúc gia đình qua những bữa cơm hàng ngày</p>
+        <p>Nói đến hạnh phúc gia đình chúng ta thường mô tả bằng những từ thật đẹp đề và được thể hiện qua những giá trị đạo đức rất đáng trân trọng như tình yêu, lòng chung thuỷ, tinh nghĩa vợ chồng, lòng yêu thương, hy sinh cho con cái, sự quý trọng, hiếu để của con cháu với cha mẹ, ông bà...</p>
+    </div>
+
+    <!-- Câu 12 -->
+    <h1>Câu 12</h1>
+    <form>
+        <h2>Phiếu đăng ký tham gia chương trình khuyến mãi</h2>
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" id="fullname" value="Nguyễn Ngọc Quỳnh Nga"><br>
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" value="2Bia Hùng Vương, Q10"><br>
+        <label for="phone">Điện thoại:</label>
+        <input type="tel" id="phone" value="0909097506"><br>
+        <label>Phái:</label>
+        <input type="radio" name="gender" value="male"> Nam
+        <input type="radio" name="gender" value="female"> Nữ<br>
+        <label for="job">Nghề nghiệp:</label>
+        <input type="text" id="job" value="Giáo viên"><br>
+        <label>Chọn sản phẩm tham gia:</label>
+        <input type="checkbox" name="product" value="toothpaste"> Kèm đánh răng
+        <input type="checkbox" name="product" value="detergent"> Bột giặt
+        <input type="checkbox" name="product" value="shampoo"> Dầu gội đầu
+        <input type="checkbox" name="product" value="milk"> Sữa tắm<br>
+        <label for="participants">Số người dự đoán tham gia:</label>
+        <input type="number" id="participants" value="250000"><br>
+        <button type="submit">Đồng ý</button>
+        <p>Bạn đã đăng ký thành công!!!</p>
+    </form>
+
+    <!-- Câu 13 -->
+    <h1>Câu 13</h1>
+    <form id="registrationForm">
+        <h2>Đăng ký tài khoản</h2>
+        <label for="fullname">Họ và tên (*):</label>
+        <input type="text" id="fullname" required>
+        <span class="error-message">Dữ liệu không để trống</span><br>
+        <label for="email">Email (*):</label>
+        <input type="email" id="email" required><br>
+        <label for="phone">Điện thoại (*):</label>
+        <input type="tel" id="phone" required><br>
+        <button type="submit">Đồng ý</button>
+    </form>
+
+    <!-- Câu 14 -->
+    <h1>Câu 14</h1>
+    <form id="registrationForm">
+        <h2>Đăng ký tài khoản</h2>
+        <label for="fullname">Họ và tên (*):</label>
+        <input type="text" id="fullname" required>
+        <span class="error-message">Dữ liệu không để trống</span><br>
+        <label for="email">Email (*):</label>
+        <input type="email" id="email" required><br>
+        <label for="phone">Điện thoại (*):</label>
+        <input type="tel" id="phone" required><br>
+        <button type="submit">Đồng ý</button>
+    </form>
+
+    <!-- Câu 15 -->
+    <h1>Câu 15</h1>
+    <form id="categoryForm">
+        <h2>Đăng ký danh mục</h2>
+        <label for="categoryName">Tên danh mục (*):</label>
+        <input type="text" id="categoryName" required>
+        <span class="error-message">Dữ liệu không để trống</span><br>
+        <label for="displayOrder">Thứ tự hiển thị (*):</label>
+        <input type="number" id="displayOrder" required><br>
+        <button type="submit">Đồng ý</button>
+    </form>
+
+    <!-- Câu 16 -->
+    <h1>Câu 16</h1>
+    <form id="accountForm">
+        <h2>Đăng ký tài khoản</h2>
+        <label for="fullname">Họ và tên (*):</label>
+        <input type="text" id="fullname" required>
+        <span class="error-message">Dữ liệu không để trống</span><br>
+        <label for="email">Email (*):</label>
+        <input type="email" id="email" required><br>
+        <label for="password">Mật khẩu (*):</label>
+        <input type="password" id="password" required minlength="6" maxlength="8">
+        <span class="error-message">Mật khẩu phải từ 6 đến 8 ký tự</span><br>
+        <label for="confirmPassword">Xác nhận mật khẩu (*):</label>
+        <input type="password" id="confirmPassword" required><br>
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address"><br>
+        <label for="birthdate">Ngày sinh:</label>
+        <input type="date" id="birthdate"><br>
+        <label>Giới tính:</label>
+        <input type="radio" name="gender" value="male"> Nam
+        <input type="radio" name="gender" value="female"> Nữ<br>
+        <button type="submit">Đăng ký</button>
+    </form>
+
+    <script>
+        // JavaScript cho Câu 5
+        document.getElementById('courseForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (this.checkValidity()) {
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        });
+
+        // JavaScript cho Câu 16
+        document.getElementById('accountForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (this.checkValidity()) {
+                if (document.getElementById('password').value !== document.getElementById('confirmPassword').value) {
+                    alert('Mật khẩu và xác nhận mật khẩu không khớp!');
+                } else {
+                    alert('Bạn đã đăng ký thành công!');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

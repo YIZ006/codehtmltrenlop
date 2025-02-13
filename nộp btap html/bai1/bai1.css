@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.content {
+    background-color:rgb(248, 247, 247);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #c71585;
+}
+.contact {
+    margin-top: 10px;
+}
+.contact p {
+    margin: 5px 0;
+}
+.content h2{
+    color: whitesmoke;
+    background-color: pink;
+    display: inline-block; /* Điều chỉnh hiển thị để chỉ kéo dài theo nội dung */
+    padding: 5px; /* Thêm khoảng cách bên trong cho đẹp */
+    border-radius: 4px;
+}
+.img{
+   margin-right:20px;
+    float:left;
+    width: auto;
+   
+}
